@@ -29,8 +29,26 @@ public class _88_Merge_Sorted_Array {
     }
 
     // dung 2 con tro
-    public static void merge2(int[] n1, int m, int[] n2, int n)  {
-
+    public  void merge2(int[] n1, int m, int[] n2, int n) {
+        int i = m - 1;
+        int j = n -1;
+        int k = ( m + n) - 1;
+        while(k >= 0) {
+            if(i < 0) {
+                n1[k] = n2[j];
+                j--;
+            }else if(j < 0) {
+                n1[k] = n1[i];
+                i--;
+            }else if(n1[i] >= n2[j]) {
+                n1[k] = n1[i];
+                i--;
+            }else {
+                n1[k] = n2[j];
+                j--;
+            }
+            k--;
+        }
     }
 
 
