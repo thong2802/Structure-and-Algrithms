@@ -1,5 +1,7 @@
 package Sort;
 
+import java.util.Arrays;
+
 public class Sort {
     public static void PrintArr (int no, int[] a) {
         System.out.printf("%d: " , no);
@@ -8,7 +10,7 @@ public class Sort {
         }
         System.out.println(" ");
     }
-    // Bubble sort
+    // Bubble sort , 0(n^2)
     public static void BubbleSort(int[] a) {
         int n = a.length;
         for (int i = 0; i < n; i++) {
@@ -27,7 +29,7 @@ public class Sort {
             }
         }
     }
-    // Select sort
+    // Select sort 0(n^2)
     public static  void SelectSort(int[] a) {
         int min ;
         int n = a.length;
@@ -49,7 +51,7 @@ public class Sort {
 
         }
     }
-    //Insert sort
+    //Insert sort 0(n^2)
     public static  void InsertSort(int[] a) {
         int n = a.length;
         for (int i = 1; i < n; i++) {
@@ -81,11 +83,10 @@ public class Sort {
         }
     }
     public static void main(String[] args) {
-       int[] a = {5, 9, 6, 2, 1, 0, 3, 4 };
+        //int[] a = {5, 9, 6, 2, 1, 0, 3, 4 };
         //BubbleSort(a);
         //SelectSort(a);
         //InsertSort(a);
-        Insert(a);
-
+        //  Insert(a);
     }
 }
