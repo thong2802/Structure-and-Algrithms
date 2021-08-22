@@ -2,7 +2,7 @@ package Linked_List;
 
 public class myLinkedList {
    // head of list
-    Node head;
+
     public static class Node{
         int value;
         Node next;
@@ -53,12 +53,98 @@ public class myLinkedList {
         return headNode;
 
     }
+    //addToIndex
+    public static Node addToIndex(Node headNode, int value, int index){
+        Node newNode = new Node(value);
+        if(index == 0){
+          return addToHead(headNode, value);
+        }else {
+            // tim vi tri can them
+            int count = 0;
+            Node curNode = headNode;
+            while (curNode.next != null){
+                count++; //node != 0 => counr ++;
+                if (count == index){
+                    // thuc hien add
+                    newNode.next = curNode.next; // tro vao value cua node sau newNode
+                    curNode.next = newNode; // Cur tro vao value cua newNode
+                    break;
+                }
+                curNode.next = curNode;
+            }
+        }
+        return headNode;
+    }
+
+    // DeleteHeadNode
+    public static Node deleteHeadNode(Node headNode){
+        if (headNode != null){
+          return headNode.next;
+        }
+        return headNode;
+    }
+    // DELETETailNode
+    public static Node deleteTailNode(Node headNode){
+        if (headNode == null){
+            return null;
+        }else {
+            // xac dinh last node va prev node
+            Node lastNode = headNode;
+            Node prevNode = null;
+            while (lastNode.next != null){// lastNode.next = null;
+                prevNode = lastNode;
+                lastNode = lastNode.next;
+            }
+            if (prevNode == null){
+                return null;
+            }else {
+                prevNode.next = null;
+            }
+        }
+        return headNode;
+    }
+    // deleteIndexNode
+    public static Node deleteIndexNode(Node headNode, int index){
+       if (headNode == null || index < 0){
+           return null;
+       }else if (index == 0 ){
+            return deleteHeadNode(headNode);
+       }else {
+            // xac dinh prev node
+            // xac dinh cur node
+            int count = 0;
+            Node cur = headNode;
+            Node prev = null;
+            boolean bIsFound = false;
+            while (cur != null){
+                if (index == count){
+                  bIsFound = true;
+                  break;
+                }
+                prev = cur;
+                cur = cur.next;
+                count++;
+            }
+            // delete cur
+            if (bIsFound){
+                if (prev == null){ // cur is lastNode
+                     return null;
+                }else {
+                    if (prev != null){
+                        prev.next = cur.next;
+                    }
+                }
+            }
+        }
+        return headNode;
+    }
+
 
     public static void main(String[] args) {
        myLinkedList list = new myLinkedList();
-       list.head  = new Node(1);
-       Node second = new Node(2);
-       Node third = new Node(3);
+       Node head  = new Node(1);
+       Node second = new Node(3);
+       Node third = new Node(4);
 
 
         /* Three nodes have been allocated dynamically.
@@ -73,7 +159,7 @@ public class myLinkedList {
          +----+------+     +----+------+     +----+------+ */
 
         // Link first node with the second node
-        list.head.next = second;
+        head.next = second;
          /*  Now next of the first Node refers to the second.  So they
             both are linked.
 
@@ -93,14 +179,26 @@ public class myLinkedList {
         +----+------+     +----+------+     +----+------+
         | 1  |  o-------->| 2  |  o-------->|  3 | null |
         +----+------+     +----+------+     +----+------+ */
-        printLinkedList(list.head);
+        printLinkedList(head);
 
-        // addHead
-        Node newList = addToHead(list.head, 0);
-        printLinkedList(newList);
-        // addTail
-        Node newTail = addToTail(list.head, 4);
-        printLinkedList(newTail);
+//        // addHead
+//        Node newList = addToHead(head, 0);
+//        printLinkedList(newList);
+//        // addTail
+//        Node newTail = addToTail(head, 5);
+//        printLinkedList(newTail);
+//        Node newCur = addToIndex(head, 2, 1);
+//        printLinkedList(newCur);
+//        Node deleteHeadNode = deleteHeadNode(head);
+        //  head = deleteHeadNode(head);
+        //  printLinkedList(head);
+//          head = deleteTailNode(head);
+//          printLinkedList(head);
+         head = deleteIndexNode(head, 0);
+         printLinkedList(head);
+         head = deleteIndexNode(head, 1);
+         printLinkedList(head);
+
 
 
     }
