@@ -43,6 +43,7 @@ public class _206Reverse_Linked_List {
         }
         return head;
     }
+    // su dung de quy
 
     public static void main(String[] args) {
       _206Reverse_Linked_List list = new _206Reverse_Linked_List();
