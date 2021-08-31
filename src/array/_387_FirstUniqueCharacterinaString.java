@@ -11,7 +11,7 @@ public class _387_FirstUniqueCharacterinaString {
        }
       return c == s.length() ? -1 : c;
     }
-    public static   int firstUniqChar1(String s){
+    public static int firstUniqChar1(String s){
         char[] c = s.toCharArray();
         int[] count = new int[123];
         for (int i = 0; i < c.length; i++) {

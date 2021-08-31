@@ -47,7 +47,7 @@ public class myArrayQueue implements InterfaceStackAndQueue {
 
     @Override
     public boolean isEmpty() {
-        return (headIndex = tailIndex) == -1;
+        return (headIndex == -1 && tailIndex ==-1);
     }
     public int count(){
         if (isEmpty()){
