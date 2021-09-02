@@ -9,7 +9,7 @@ public class _977SquaresofaSortedArray {
         // cho i = -1 de nam ngoai mang
         // la so am cuoi cung trong day
         int i = -1;
-        int n = nums.length -1;
+        int n = nums.length;
         while ((i + 1) < n && nums[i+1] < 0){
             i++;
         }
