@@ -139,12 +139,27 @@ public class myLinkedList {
         return headNode;
     }
 
+    public static Node removeNthFromEnd(Node head, int n) {
+        Node fast = head, slow = head;
+        for (int i = 0; i < n; i++) {
+            fast = fast.next;
+        }
+        if (fast == null) return head.next;
+        while (fast.next != null) {
+            fast = fast.next;
+            slow = slow.next;
+        }
+        slow.next = slow.next.next;
+        return head;
+    }
 
     public static void main(String[] args) {
        myLinkedList list = new myLinkedList();
        Node head  = new Node(1);
-       Node second = new Node(3);
-       Node third = new Node(4);
+       Node second = new Node(2);
+       Node third = new Node(3);
+       Node four = new Node(4);
+       Node five = new Node(5);
 
 
         /* Three nodes have been allocated dynamically.
@@ -160,6 +175,7 @@ public class myLinkedList {
 
         // Link first node with the second node
         head.next = second;
+
          /*  Now next of the first Node refers to the second.  So they
             both are linked.
 
@@ -179,6 +195,10 @@ public class myLinkedList {
         +----+------+     +----+------+     +----+------+
         | 1  |  o-------->| 2  |  o-------->|  3 | null |
         +----+------+     +----+------+     +----+------+ */
+        third.next = four;
+       // four.next = five;
+        printLinkedList(head);
+        removeNthFromEnd(head, 2);
         printLinkedList(head);
 
 //        // addHead
@@ -194,10 +214,10 @@ public class myLinkedList {
         //  printLinkedList(head);
 //          head = deleteTailNode(head);
 //          printLinkedList(head);
-         head = deleteIndexNode(head, 0);
-         printLinkedList(head);
-         head = deleteIndexNode(head, 1);
-         printLinkedList(head);
+//         head = deleteIndexNode(head, 0);
+//         printLinkedList(head);
+//         head = deleteIndexNode(head, 1);
+//         printLinkedList(head);
 
 
 
