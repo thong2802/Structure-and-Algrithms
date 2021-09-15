@@ -5,7 +5,6 @@ public class myArrayStack implements InterfaceStackAndQueue {
     private int SIZE;
     private int topIndex ;
 
-
     myArrayStack(int size){
       SIZE = size;
       array = new  int[SIZE];
