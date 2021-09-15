@@ -174,4 +174,49 @@ public class myBST {
         System.out.print(root.val + "-");
     }
 
+    // duyet theo chieu sau/ do cao lon nhat
+    // khi đi tìm ta quy ra thành tìm chiều cao của 2 cây con bên trái và bên phải rồi so sánh bên nào lớn hơn
+    public int maxDepth(TreeNode root) {
+        // TH cơ sở : điều kiện dưng
+        if (root == null){
+            return 0;
+        }
+        // cong thuc de quy
+        int chieuCaoCayConBenTrai = maxDepth(root.left);
+        int chieuCaoCayConBenPhai = maxDepth(root.right);
+
+        // tim max sau do xong voi 1
+        int result = Math.max(chieuCaoCayConBenTrai, chieuCaoCayConBenPhai) + 1;
+
+      return result;
+    }
+
+
+    // bai toan tinh tong tren cay
+    // kiem tra xem co phai la nodeLa khay k
+    public boolean isLeaf(TreeNode node){
+        return node.left == null && node.right == null;
+    }
+    // ham duyet
+    public boolean duyet(TreeNode curNode, int curSum, int tarGet){
+        // DK DUNG
+        // curNode tro toi Null thi xet toi node la thoi
+        if (curNode == null){
+            return false;
+        }
+        // kiem tra xem phai node la k
+        curSum += curNode.val;
+        if (isLeaf(curNode)){
+            return curSum == tarGet;
+        }
+
+        // duyet trai phai
+        boolean kqTrai = duyet(curNode.left, curSum, tarGet);
+        boolean kqPhai = duyet(curNode.right, curSum, tarGet);
+
+        return kqPhai || kqTrai;
+    }
+    public boolean hasPathSum(TreeNode root, int targetSum) {
+        return duyet(root, 0, targetSum);
+    }
 }
