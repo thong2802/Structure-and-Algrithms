@@ -32,7 +32,7 @@ public class Fibonacci {
        Fibo[1] = 1;
        Fibo[2] = 1;
         for (int i = 3; i < 10 ; i++) {
-            Fibo[i] = F[i-1] + F[i-2];
+            Fibo[i] = Fibo[i-1] + Fibo[i-2];
         }
     return Fibo[n];
     }
