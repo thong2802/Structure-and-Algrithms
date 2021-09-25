@@ -10,7 +10,7 @@ public class Fibonacci {
 
     // toi uu de quy tranh ton nhieu thoi gian va bo nho vi ham duoc goi nhieu lam
     // de quy co nho
-   static int[] F = new int[1000];
+    static int[] F = new int[1000];
     public static int fibonacci2(int n){
         if (F[n] != 0)
             return F[n];

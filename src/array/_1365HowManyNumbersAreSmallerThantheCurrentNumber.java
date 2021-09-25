@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class _136_5HowManyNumbersAreSmallerThantheCurrentNumber {
+public class _1365HowManyNumbersAreSmallerThantheCurrentNumber {
     // array
     public  static int[] smallerNumbersThanCurrent(int[] nums) {
         int[] countSmaller =  new int[nums.length];
@@ -19,17 +19,25 @@ public class _136_5HowManyNumbersAreSmallerThantheCurrentNumber {
         }
      return countSmaller;
     }
-    //hashtable
+    //hashtable, sort
     public int[] smallerNumbersThanCurrent1(int[] nums) {
         int n = nums.length;
-        int[] count = new int[101];
-        // dem so lan xuat hien cua cac phan tu truoc
+        int[] result = new int[n];
+        int[] original = Arrays.copyOf(nums, n);
+        Map<Integer, Integer> myMap = new HashMap<>();
+        Arrays.sort(nums);
 
-        for (int i = 0; i < n; i++) {
-
+        for (int i = 0; i < nums.length; i++) {
+           if(myMap.containsKey(nums[i]) == false){
+               myMap.put(nums[i], i);
+           }else {
+               // bo qua phan tu trung lap
+           }
         }
-
-        return nums;
+        for (int i = 0; i < original.length; i++) {
+            result[i] = myMap.get(original[i]);
+        }
+        return result;
     }
 
 
