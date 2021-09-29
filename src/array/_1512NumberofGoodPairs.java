@@ -36,8 +36,8 @@ public class _1512NumberofGoodPairs {
         }
         return count;
     }
-
-
+    // 2 con tro
+    
     public static void main(String[] args) {
         int[] nums = {1,2,3,1,1,3};
         System.out.println(numIdenticalPairs1(nums));

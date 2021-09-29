@@ -22,7 +22,7 @@ public class _19RemoveNthNodeFromEndofList {
     // hết vòng lặp nếu fast trỏ tới null thì tức là list có 2 phần tử và return head.next
     // nếu không cho vòng lặp fast!=null và cho fast và slow nhảy từng bước đến khi fast == null => slow đang trỏ tới node cần xoá và cho slow = slow.next.next
 
-    public ListNode removeNthFromEnd(ListNode head, int n) {
+    public  static ListNode removeNthFromEnd(ListNode head, int n) {
         if (head == null){
             return null;
         }else {
@@ -47,6 +47,5 @@ public class _19RemoveNthNodeFromEndofList {
         return head;
     }
     public static void main(String[] args) {
-
     }
 }
