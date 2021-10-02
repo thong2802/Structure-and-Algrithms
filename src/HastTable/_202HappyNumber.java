@@ -42,6 +42,6 @@ public class _202HappyNumber {
     }
 
     public static void main(String[] args) {
-        System.out.println(isHappy(2));
+        System.out.println(isHappy(19));
     }
 }
