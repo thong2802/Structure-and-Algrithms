@@ -10,9 +10,5 @@ public class _23MergekSortedLists_cach2 {
   }
 
   // solution 2: n*logk
-    public static ListNode addNodeToList(ListNode head, ListNode newNode){
 
-
-        return head;
-    }
 }

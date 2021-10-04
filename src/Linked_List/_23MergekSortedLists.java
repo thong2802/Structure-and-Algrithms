@@ -17,7 +17,7 @@ public class _23MergekSortedLists {
         }
 
     }
-    // cach 1: 0(n)
+    // cach 1: 0(n^2)
     // solution 1: tạo ra một linkedlist mới, thêm 3 listNode kia vao theo dung thu tu sap xep
     public static ListNode addNodeToList(ListNode head, ListNode newNode){
         newNode.next = null;

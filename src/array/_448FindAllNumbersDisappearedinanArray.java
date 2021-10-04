@@ -8,12 +8,12 @@ public class _448FindAllNumbersDisappearedinanArray {
     public static List<Integer> findDisappearedNumbers(int[] a) {
        List<Integer> result = new ArrayList<>();
        for (int i = 0; i <a.length; i++ ){
-           int index = Math.abs(a[i]) - 1;
+           int index = Math.abs(a[i]) -1 ;
            a[index] = Math.abs(a[index]) * -1;
        }
        for (int index  = 0; index < a.length; index++){
            if (a[index] > 0){
-               result.add(index + 1);
+               result.add(index +1);
            }
        }
        return result;
@@ -22,7 +22,7 @@ public class _448FindAllNumbersDisappearedinanArray {
     // cách 2 :dùng thêm bộ nhớ
     public static List<Integer> findDisappearedNumbers1(int[] a) {
         List<Integer> result = new ArrayList<>();
-        boolean[] exist = new boolean[a.length + 1];
+        boolean[] exist = new boolean[a.length +1];
         for (int i = 0; i < a.length; i++) {
             exist[a[i]] = true;
         }
@@ -35,6 +35,6 @@ public class _448FindAllNumbersDisappearedinanArray {
     }
     public static void main(String[] args) {
         int[] a = {4,3,2,7,8,2,3,1};
-        System.out.println(findDisappearedNumbers1(a));
+        System.out.println(findDisappearedNumbers(a));
     }
 }
