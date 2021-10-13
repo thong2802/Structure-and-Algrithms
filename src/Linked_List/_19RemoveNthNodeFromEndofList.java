@@ -41,11 +41,12 @@ public class _19RemoveNthNodeFromEndofList {
                 slow = slow.next;
             }
             // tim duoc slow tro toi phan tu can xoas
-            slow = slow.next.next;
+            slow.next = slow.next.next;
 
         }
         return head;
     }
     public static void main(String[] args) {
+
     }
 }

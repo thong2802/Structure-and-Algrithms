@@ -2,7 +2,7 @@ package BitManipulation;
 
 public class _268MissingNumber {
     public static int missingNumber(int[] nums) {
-       int result = 0;
+        int result = 0;
         for (int ai :nums) {
             result ^= ai;
         }
