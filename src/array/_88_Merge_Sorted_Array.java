@@ -8,7 +8,6 @@ public class _88_Merge_Sorted_Array {
             m++;
         }
     }
-
     private static void chenvaonums1(int ai, int[] nums1, int m) {
         boolean timduoc = false;
         for (int k = 0; k < m; k++) {
@@ -20,9 +19,7 @@ public class _88_Merge_Sorted_Array {
                 nums1[k] = ai;
                 break;
             }
-
         }
-
         if (timduoc == false) {
             nums1[m] = ai;
         }
@@ -53,9 +50,9 @@ public class _88_Merge_Sorted_Array {
 
 
     public static void main(String[] args) {
-        int[] n1 = {1,2,3,4,0,0,0};
-        int[] n2 = {2,5,6};
-        merge(n1, 4, n2, 3);
+        int[] n1 = {0};
+        int[] n2 = {1};
+        merge(n1, 0, n2, 1);
         System.out.println("DONW");
     }
 }

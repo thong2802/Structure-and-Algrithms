@@ -25,6 +25,5 @@ public class String_Character_and_Char {
         System.out.println(s2.equals(s3));
         System.out.println(s3.equals(s4));
         System.out.println(s2.equals(s4));
-
     }
 }
