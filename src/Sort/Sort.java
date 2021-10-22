@@ -64,7 +64,6 @@ public class Sort {
             }
             a[j + 1] = ai;
             PrintArr(i, a);
-
         }
     }
 
@@ -87,6 +86,6 @@ public class Sort {
         //BubbleSort(a);
         //SelectSort(a);
         //InsertSort(a);
-        //  Insert(a);
+        //Insert(a);
     }
 }
