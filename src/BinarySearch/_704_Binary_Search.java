@@ -1,6 +1,9 @@
 package BinarySearch;
 
 public class _704_Binary_Search {
+
+    //complixity time log(n)
+    // complixity space O(1)
     // su dung vong lap
     public static int search(int[] nums, int target) {
         int n = nums.length;
@@ -21,6 +24,8 @@ public class _704_Binary_Search {
     }
 
     // su dung de quy
+    //complixity time log(n)
+    // complixity space O(logn)
     public static int searchb(int[] nums, int target, int iLeft, int iRight) {
         if (iLeft > iRight)
             return -1;
