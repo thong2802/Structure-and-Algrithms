@@ -42,7 +42,7 @@ public class myMergaSort {
              int[] single = {a[L]};
              return single;
          }
-         // CHIA DE TRI
+
        // System.out.println("Chia ra " + L + " - " + R);
         int k = (L + R)/2; // tach lam 2 mang
         int[] a1 = MegarSort1(a, L, k);  // luu mang ben phai
@@ -62,6 +62,5 @@ public class myMergaSort {
         int[] b = {2,4,6,8,10};
         int[] c = {5,1,1,2,0,0};
         System.out.println(Arrays.toString(s.MegarSort1(c)));
-
     }
 }
