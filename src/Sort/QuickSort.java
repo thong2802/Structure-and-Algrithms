@@ -22,7 +22,6 @@ public class QuickSort {
         int iR = R;
         // doi phan tu khi iL < = iR
         while (iL <= iR) {
-            // với iL tìm phần tử >= key để đổi chỗ
             while (a[iL] < key) iL++;
             // với iR tìm phần tử <= key để đổi chỗ
             while (a[iR] > key) iR--;

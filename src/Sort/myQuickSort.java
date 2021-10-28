@@ -15,8 +15,8 @@ public class myQuickSort {
         System.out.println(Arrays.toString(Arrays.copyOfRange(a, L, R+1)));
         System.out.println("==========================");
         // chia nhỏ mảng theo khoá iL
-       quickSort(a, 0, k-1);
-       quickSort(a, k+1, R);
+       quickSort(a, L, k-1);
+       quickSort(a, k, R);
     }
     static int partition(int[] a, int L, int R, int key){
         int iL = L;
@@ -40,7 +40,7 @@ public class myQuickSort {
     }
 
     public static void main(String[] args) {
-        int[] a = {5,2,3,1};
+        int[] a = {6,7,8,5,4,1,2,3};
         quickSort(a, 0, a.length-1);
         System.out.println(Arrays.toString(a));
     }
