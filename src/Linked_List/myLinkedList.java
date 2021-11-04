@@ -70,7 +70,7 @@ public class myLinkedList {
                     curNode.next = newNode; // Cur tro vao value cua newNode
                     break;
                 }
-                curNode.next = curNode;
+                curNode = curNode.next;
             }
         }
         return headNode;
