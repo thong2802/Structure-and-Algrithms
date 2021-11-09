@@ -78,6 +78,51 @@ public class DesignLinkedList {
         return head;
     }
 
+    // delete headNode
+    public static Node1 removeHeadNode(Node1 head){
+        if (head != null) {
+            head = head.next;
+        }
+        return head;
+    }
+
+    // deleteTailNode
+    public static Node1 removeTailNode(Node1 head){
+        if (head == null){
+            return null;
+        }else {
+            Node1 prev = null;
+            Node1 last = head;
+            while (last.next != null){
+                prev = last;
+                last = last.next;
+            }
+            if (prev == null){
+                return null;
+            }else {
+                prev.next = null;
+            }
+        }
+        return head;
+    }
+
+    public static Node1 removeIndexNode(Node1 head, int index){
+        if (head == null){
+            return null;
+        }else if (index == 0){
+            return removeHeadNode(head);
+        } else {
+            Node1 prev = null;
+            Node1 cur = head;
+            while (cur != null){
+
+            }
+        }
+        return head;
+    }
+
+
+
     public static void main(String[] args) {
        Node1 n1 = new Node1(1);
        Node1 n2 = new Node1(2);
@@ -125,6 +170,8 @@ public class DesignLinkedList {
         Print(addHead(n1, 3));
         Print(addTailNode(n1, 9));
         Print(addToIndex(n1, 55, 4));
+        Print(removeHeadNode(n1));
+        Print(removeTailNode(n1));
 
     }
 }
