@@ -107,15 +107,32 @@ public class DesignLinkedList {
     }
 
     public static Node1 removeIndexNode(Node1 head, int index){
-        if (head == null){
+        if (head == null || index < 0 ){
             return null;
         }else if (index == 0){
             return removeHeadNode(head);
         } else {
+            int count = 0;
             Node1 prev = null;
             Node1 cur = head;
+            boolean bIsFound = false;
             while (cur != null){
-
+                if (index == count){
+                    bIsFound = true;
+                    break;
+                }
+               prev = cur;
+               cur = cur.next;
+               count ++;
+            }
+            if (bIsFound){
+                if (prev == null){ // cur is lastNode
+                    return null;
+                }else {
+                    if (prev != null){
+                        prev.next = cur.next;
+                    }
+                }
             }
         }
         return head;
@@ -172,6 +189,7 @@ public class DesignLinkedList {
         Print(addToIndex(n1, 55, 4));
         Print(removeHeadNode(n1));
         Print(removeTailNode(n1));
+        Print(removeIndexNode(n1,2));
 
     }
 }
