@@ -7,8 +7,8 @@ import java.util.Map;
 public class _1365HowManyNumbersAreSmallerThantheCurrentNumber {
     // array
     public  static int[] smallerNumbersThanCurrent(int[] nums) {
-        int[] countSmaller =  new int[nums.length];
-        for (int i = 0; i < nums.length; i++) {
+            int[] countSmaller =  new int[nums.length];
+            for (int i = 0; i < nums.length; i++) {
             // tai vi tri i di tim bao nhieu phan tu nho hon no
             int k = nums[i];
             for (int j = 0; j < nums.length ; j++) {
@@ -20,7 +20,7 @@ public class _1365HowManyNumbersAreSmallerThantheCurrentNumber {
      return countSmaller;
     }
     //hashtable, sort
-    public int[] smallerNumbersThanCurrent1(int[] nums) {
+    public static  int[] smallerNumbersThanCurrent1(int[] nums) {
         int n = nums.length;
         int[] result = new int[n];
         int[] original = Arrays.copyOf(nums, n);
@@ -40,10 +40,8 @@ public class _1365HowManyNumbersAreSmallerThantheCurrentNumber {
         return result;
     }
 
-
-
     public static void main(String[] args) {
-       int[] nums = {7,7,7,7};
-        System.out.println(Arrays.toString(smallerNumbersThanCurrent(nums)));
+       int[] nums = {8,1,2,2,3};
+        System.out.println(Arrays.toString(smallerNumbersThanCurrent1(nums)));
     }
 }
