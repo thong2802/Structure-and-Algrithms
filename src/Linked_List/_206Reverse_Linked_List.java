@@ -44,7 +44,23 @@ public class _206Reverse_Linked_List {
         return head;
     }
     // su dung de quy
+    public static Node reverseList1(Node head){
+    // BTCS
+        if (head == null)
+            return null;
 
+        Node nextHead = head.next;
+        //TH 1 Node
+        if (nextHead == null)
+            return head;
+
+        // TH TQ
+        Node newNode = reverseList1(nextHead);
+        nextHead.next = head;
+        head.next = null;
+
+        return newNode;
+    }
 
     public static void main(String[] args) {
       _206Reverse_Linked_List list = new _206Reverse_Linked_List();
@@ -60,7 +76,7 @@ public class _206Reverse_Linked_List {
       n4.next = n5;
 
       printNode(n1);
-      n1 = reverseList(n1);
+      n1 = reverseList1(n1);
       printNode(n1);
     }
 }
