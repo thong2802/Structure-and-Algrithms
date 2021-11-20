@@ -29,6 +29,7 @@ public class testMain {
         queue.show();*/
 
         // Stack - Linked List
+/*
         Stack_LiknedList stack_liknedList = new Stack_LiknedList();
         System.out.println(stack_liknedList.isEmpty());
         System.out.println(stack_liknedList.isFull());
@@ -43,6 +44,25 @@ public class testMain {
         System.out.println(stack_liknedList.pop());
         System.out.println(stack_liknedList.pop());
         System.out.println(stack_liknedList.pop());
+*/
 
+        // Queue - Linked List
+        Queue_LinkedList queue_linkedList = new Queue_LinkedList();
+        System.out.println(queue_linkedList.isEmpty());
+        System.out.println(queue_linkedList.isFull());
+        queue_linkedList.show();
+        System.out.println(queue_linkedList.push(1));
+        System.out.println(queue_linkedList.push(2));
+        System.out.println(queue_linkedList.push(3));
+        System.out.println(queue_linkedList.push(4));
+        queue_linkedList.show();
+        System.out.println(queue_linkedList.pop());
+        queue_linkedList.show();
+        System.out.println(queue_linkedList.pop());
+        queue_linkedList.show();
+        System.out.println(queue_linkedList.pop());
+        queue_linkedList.show();
+        System.out.println(queue_linkedList.pop());
+        queue_linkedList.show();
    }
 }
