@@ -56,7 +56,6 @@ public class myLinkedStack  implements InterfaceStackAndQueue{
          System.out.println("empty");
          return;
      }
-
      Node temp = topNode;
      ArrayList<Integer> arrayList = new ArrayList<>();
      while (temp != null){

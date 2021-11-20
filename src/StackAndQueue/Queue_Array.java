@@ -13,19 +13,18 @@ public class Queue_Array implements InterfaceStack_Queue{
     }
 
     @Override
-    public boolean push(int value) {
-        if (!isFull()){
-            if (isEmpty()){
-                // neu rong thi them lan dau => head = tail
-                headIndex++;
+        public boolean push(int value) {
+            if (!isFull()){
+                if (isEmpty()){
+                    // neu rong thi them lan dau => head = tail
+                    headIndex ++;
+                }
+                tailIndex++;
+                array[tailIndex] = value;
+                return true;
             }
-            tailIndex++;
-            array[tailIndex] = value;
-            return true;
+            return false;
         }
-        return false;
-    }
-
     @Override
     public int pop() {
         int value = -1;
@@ -42,12 +41,12 @@ public class Queue_Array implements InterfaceStack_Queue{
 
     @Override
     public boolean isFull() {
-        return (tailIndex == SIZE -1) ? true : false;
+        return tailIndex == SIZE-1;
     }
 
     @Override
     public boolean isEmpty() {
-        return (headIndex = tailIndex) < 0 ? true : false;
+        return (headIndex == -1 && tailIndex ==-1);
     }
 
     public int count(){
