@@ -1,6 +1,7 @@
 package array;
 
 public class _1342NumberofStepstoReduceaNumbertoZero {
+    // use recursion
     public  static int numberOfSteps(int num) {
         return help(num,0);
     }
@@ -13,7 +14,23 @@ public class _1342NumberofStepstoReduceaNumbertoZero {
         }
         return help(num-1,c+1);
     }
+
+    // use loop
+    public static int numberOfSteps1(int num) {
+        int step = 0;
+        while (num > 0){
+            if (num % 2 == 0){
+                num = num / 2;
+            }else {
+                num  = num - 1;
+            }
+            step ++;
+        }
+        return step;
+    }
+    // complexity  time 0(logN)
+    // complexity space 0(1)
     public static void main(String[] args) {
-        System.out.println(numberOfSteps(8));
+        System.out.println(numberOfSteps1(8));
     }
 }
