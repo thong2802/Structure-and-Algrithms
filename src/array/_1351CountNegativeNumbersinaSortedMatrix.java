@@ -1,6 +1,7 @@
 package array;
 
 public class _1351CountNegativeNumbersinaSortedMatrix {
+    //
     public static int countNegatives(int[][] grid) {
         int count = 0;
         int row = grid.length;
