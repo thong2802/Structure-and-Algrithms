@@ -44,7 +44,7 @@ public class Queue_LinkedList implements InterfaceStack_Queue{
 
     @Override
     public boolean isFull() {
-        return false;
+        return true;
     }
 
     @Override
