@@ -15,6 +15,10 @@ public class _1323Maximum69Number {
         }
         return Integer.parseInt(stringBuilder.toString());
     }
+
+    // complexit time 0(n)
+    // complexit space 0(n)
+
     public static void main(String[] args) {
         int  num = 9669;
         System.out.println(maximum69Number(num));
