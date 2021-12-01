@@ -23,6 +23,7 @@ public class designHashMap {
 
     private final int SIZE = 1000;
     private ArrayList<Data> myBucket[];
+
     designHashMap(){
       myBucket = new ArrayList[SIZE];
         for (int i = 0; i < myBucket.length; i++) {
