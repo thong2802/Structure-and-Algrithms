@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class HastMap {
-
    private class Data{
         int key;
         int value;
