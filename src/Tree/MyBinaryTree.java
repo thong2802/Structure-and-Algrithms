@@ -26,8 +26,5 @@ public class MyBinaryTree {
 
         // tro dinh cao nhat vao root
         root = n0;
-
-
-
     }
 }

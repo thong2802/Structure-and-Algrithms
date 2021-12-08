@@ -6,7 +6,7 @@ import java.util.Map;
 public class _387FirstUniqueCharacterinaString {
     public static int firstUniqChar(String s) {
         Map<Character, Integer> myHastMap = new HashMap<>();
-        int soLanXuatHien = 0;
+            int soLanXuatHien = 0;
         for (int i = 0; i < s.length(); i++) {
             char a = s.charAt(i);
             if (myHastMap.containsKey(a) == false) {
