@@ -12,5 +12,8 @@ public class Main2 {
         bst2.mRoot2 = bst2.insert1(bst2.mRoot2, 0);
         bst2.mRoot2 = bst2.insert1(bst2.mRoot2, 3);
         System.out.println("done");
+
+        bst2.mRoot2 = bst2.delete(bst2.mRoot2, 6);
+        System.out.println("done");
     }
 }

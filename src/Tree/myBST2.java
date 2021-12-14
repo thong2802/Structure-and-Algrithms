@@ -67,7 +67,57 @@ public class myBST2 {
     }
 
     // delete
+    // The first : Find node X need delete
+    // Second : delete node X
+    // TH1 : X khong co node con (x la node leaf) -> Tro node root cua Node x ve null
+    // TH2 : X co mot node con -> tim node cha cua node can delete sau do tro vao node con cua no : example : 5-6-7 -> 5->6
+    // TH3 : X co 2 node con
+            // We are have two solution :
+            // C1 : tim node con trai cung cua cay con ben phai
+            // C2 : tim node con phai cung cua cay con ben trai
+    // => then delete : there are can have two binary search tree
+    public  TreeNode2 findLeftEnd(TreeNode2 root){
+        if (root == null){
+            return null;
+        }
+        TreeNode2 nodeLeft = root;
+        while(nodeLeft.left != null){
+            nodeLeft = nodeLeft.left;
+        }
+        return nodeLeft;
+    }
+    public TreeNode2 delete(TreeNode2  root, int key) {
+        if (root == null) {
+            return null;
+        }else if (key > root.val) { // key right
+           root.right = delete(root.right, key);
+        }else if (key < root.val) { // key left
+            root.left = delete(root.left, key);
+        }else {
+            // TH1 : X Khong co node con (x dont have node leaf)
+            if (root.right == null && root.left == null) {
+                return null;
+            }
+            // TH2 : X have a node right || x have a node left
+            // TH2 : Chi co mot con ben phai
+            if (root.right != null && root.left == null) {
+                return root.right;
+            }
+            // TH2 : Chi co mot con ben trai
+            if (root.left != null && root.right == null) {
+                return root.left;
+            }
 
+            // TH3 : X Co 2 node con
+            // choosse solution : find left end of tree node right
+            TreeNode2 leftNode = findLeftEnd(root.right);
+            // gan root = leftNode
+            root.val = leftNode.val;
+            // delete leftNode da gan thanh root
+            root.right = delete(root.right, leftNode.val);
+        }
+        return root;
+    }
     // Search
 
     
