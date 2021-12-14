@@ -89,11 +89,15 @@ public class myBST2 {
     public TreeNode2 delete(TreeNode2  root, int key) {
         if (root == null) {
             return null;
+
+            // B1 : FIND NODE NEED DELETE
         }else if (key > root.val) { // key right
            root.right = delete(root.right, key);
         }else if (key < root.val) { // key left
             root.left = delete(root.left, key);
         }else {
+            // b2 : xoa
+
             // TH1 : X Khong co node con (x dont have node leaf)
             if (root.right == null && root.left == null) {
                 return null;
@@ -119,6 +123,56 @@ public class myBST2 {
         return root;
     }
     // Search
+    public TreeNode2 searchBST(TreeNode2 root, int val) {
+        if (root == null) {
+            return null;
+        }
+        if (val > root.val){
+            return searchBST(root.right, val);
+        }else if (val < root.val) {
+            return searchBST(root.left, val);
+        }else { // val == root
+            return root;
+        }
+    }
 
-    
+    // Traversal
+    /*
+     1. pre-oder (N-L-R)
+     2. in-oder  (L-N-R)
+     3. Post-oder(L-R-N)
+     */
+    public static void preOder(TreeNode2 curNode) {// N-L-R
+        if (curNode == null) {
+            return;
+        }
+        // traverse root
+        System.out.println("curNode : " + curNode.val);
+        // traversal left
+        preOder(curNode.left);
+        //  traversal right
+        preOder(curNode.right);
+    }
+
+    public static void inOder(TreeNode2 root){ // 2. in-oder  (L-N-R)
+        if (root == null) return;
+
+        // traversal left
+        inOder(root.left);
+        // traverse root
+        System.out.println("curNode: " + root.val);
+        //  traversal right
+        inOder(root.right);
+    }
+
+    public static void postOder(TreeNode2 root){ // 3. Post-oder(L-R-N)
+        if (root == null) return;
+
+        // traversal left
+        postOder(root.left);
+        //  traversal right
+        postOder(root.right);
+        // traverse root
+        System.out.println("curNode: " + root.val);
+    }
 }
