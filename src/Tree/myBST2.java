@@ -175,4 +175,6 @@ public class myBST2 {
         // traverse root
         System.out.println("curNode: " + root.val);
     }
+
+
 }

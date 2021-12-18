@@ -13,7 +13,10 @@ public class _1TwoSum {
         }
      return result;
     }
-    public static void main(String[] args) {
 
+
+    public static void main(String[] args) {
+        // tinh tong a, b, c
+        
     }
 }
