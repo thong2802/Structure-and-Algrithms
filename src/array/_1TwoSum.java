@@ -1,5 +1,7 @@
 package array;
 
+import java.util.Scanner;
+
 public class _1TwoSum {
     public int[] twoSum(int[] nums, int target) {
       int[] result = new int[2];
@@ -13,10 +15,6 @@ public class _1TwoSum {
         }
      return result;
     }
-
-
     public static void main(String[] args) {
-        // tinh tong a, b, c
-        
     }
 }
