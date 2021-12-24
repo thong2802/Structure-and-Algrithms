@@ -50,6 +50,8 @@ public class _142LinkedListCycleII {
         }
     }
 
+    // complexity time 0(N^2)
+    // complixity space 0(1)
 
     public static void main(String[] args) {
 
