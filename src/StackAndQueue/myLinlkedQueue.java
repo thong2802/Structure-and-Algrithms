@@ -1,7 +1,6 @@
 package StackAndQueue;
 
 public class myLinlkedQueue implements InterfaceStackAndQueue{
-
     private class Node{
        int value;
        Node next;

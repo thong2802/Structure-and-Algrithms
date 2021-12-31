@@ -22,7 +22,7 @@ public class _622DesignCircularQueue {
        if (tail == SIZE){
            tail = 0;
        }
-       value = array[tail];
+        array[tail] = value;
        count++;
        return true;
     }
