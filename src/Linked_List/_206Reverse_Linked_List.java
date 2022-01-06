@@ -49,17 +49,17 @@ public class _206Reverse_Linked_List {
         if (head == null)
             return null;
 
-        Node nextHead = head.next;
-        //TH 1 Node
-        if (nextHead == null)
+        Node nextNode = head.next;
+        //TH  1Node
+        if (nextNode == null)
             return head;
 
         // TH TQ
-        Node newNode = reverseList1(nextHead);
-        nextHead.next = head;
+        Node newHead = reverseList1(nextNode);
+        nextNode.next = head;
         head.next = null;
 
-        return newNode;
+        return newHead;
     }
 
     public static void main(String[] args) {

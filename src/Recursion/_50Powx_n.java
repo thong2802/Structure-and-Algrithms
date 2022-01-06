@@ -1,7 +1,6 @@
 package Recursion;
 //50. Pow(x, n)
 public class _50Powx_n {
-    static int[] F = new int[1000];
     public static double myPow0(double x, int n) {
         // dk dung
         // x^0 = 1
@@ -30,7 +29,7 @@ public class _50Powx_n {
            n_2 = n%2 == 0 ? n/2 : (n-1)/2;
         }
         // x^n = x^(n/2) * x^(n/2)
-        // chỉ cần tính một nửa = n^(n/2) sau đó nhân 2 => giảm đi số lần tính và gọi hàm đi một
+
         double t = myPow(x, n_2);
         return n%2 == 0 ? (t*t) : (x*t*t);
 //        if (n%2 == 0){
