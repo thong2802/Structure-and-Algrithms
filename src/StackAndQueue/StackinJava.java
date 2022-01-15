@@ -7,6 +7,7 @@ public class StackinJava {
         Stack<Integer> stack = new Stack<>();
         stack.push(1);
         stack.push(2);
+        stack.add(8);
         stack.push(3);
 
         stack.pop();
