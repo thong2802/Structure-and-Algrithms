@@ -71,5 +71,6 @@ public class Dijkstra {
             chay = previous[chay];
         }
         System.out.print(chay);
+        System.out.println();
     }
 }

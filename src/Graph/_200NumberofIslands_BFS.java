@@ -1,7 +1,7 @@
 package Graph;
 
 public class _200NumberofIslands_BFS {
-     boolean[][] daDuyet = new boolean[300][300];
+    boolean[][] daDuyet = new boolean[300][300];
     int soHang;
     int soCot;
     public boolean isVailid(int i, int j){
