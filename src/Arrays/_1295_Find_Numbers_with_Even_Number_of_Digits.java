@@ -1,5 +1,7 @@
 package Arrays;
 
+import java.util.Arrays;
+
 public class  _1295_Find_Numbers_with_Even_Number_of_Digits {
     public static int findNumbers(int[] nums) {
         // create avaible count
@@ -7,7 +9,7 @@ public class  _1295_Find_Numbers_with_Even_Number_of_Digits {
         for (int num:nums) {
             // check số lương chỗ số của a
             // nếu số lượng chắn -> % 2 = 0 => count ++;
-            if (soLuongChuSo(num) % 2 == 0) {
+            if (soLuongChuSo1(num) % 2 == 0) {
                 count ++;
             }
         }
@@ -24,6 +26,9 @@ public class  _1295_Find_Numbers_with_Even_Number_of_Digits {
         }
         return count;
     }
+    public static int soLuongChuSo1(int num) {
+        return (int)Math.log(num) ;
+    }
 
     // solution 1
     public int findNumbers1(int[] nums) {
@@ -37,7 +42,7 @@ public class  _1295_Find_Numbers_with_Even_Number_of_Digits {
     }
 
     public static void main(String[] args) {
-       int[] nums = {12,345,2,6,7896};
+       int[] nums = {252};
         System.out.println( findNumbers(nums));
     }
 }
