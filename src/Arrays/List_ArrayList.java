@@ -1,6 +1,7 @@
 package Arrays;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class List_ArrayList {
@@ -10,5 +11,7 @@ public class List_ArrayList {
         arr.remove(1);
         arr.clear();
         arr.contains(1);
+
+       
     }
 }
