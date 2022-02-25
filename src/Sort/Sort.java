@@ -80,8 +80,8 @@ public class Sort {
         }
     }
     public static void main(String[] args) {
-        //int[] a = {5, 9, 6, 2, 1, 0, 3, 4 };
-        //BubbleSort(a);
+        int[] a = {5, 9, 6, 2, 1, 0, 3, 4 };
+        BubbleSort(a);
         //SelectSort(a);
         //InsertSort(a);
         //Insert(a);
