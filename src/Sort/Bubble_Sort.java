@@ -1,6 +1,10 @@
 package Sort;
 
 public class Bubble_Sort {
+    // run from head to the end array
+    // If element the first than more the second element is swap
+    // then each loop is the max element will downd the end array.
+
     public static void printSort(int no, int[] a) {
         System.out.printf("%d: " , no);
         for (int i = 0; i < a.length; i++) {
