@@ -18,6 +18,7 @@ public class SelectSort {
         for (int i = 0; i < n -1; i++) {
             min = i;
             for (int j = i +1; j < n; j++) {
+                // find mix [i+1, n]
                 if (a[j] < a[min]){
                     min = j;
                 }
