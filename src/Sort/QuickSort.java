@@ -1,33 +1,38 @@
 package Sort;
 
+import java.util.Arrays;
+import java.util.WeakHashMap;
+
 public class QuickSort {
-     static void quickSort(int[] a, int L, int R){
-        //DK DUNG
-        if (L >= R){
+    public static void quickSort(int[] a, int L, int R) {
+        // bai toan co so
+        if (L >= R)
             return;
-        }
-        //b1 Chon khoa
-         int key = a[(L+R)/2]; // quan tam toi gia tri cua khoa chu khong phai chi so index
-        //b2 phan bo lai mang theo khoa
-         int k = partition(a, L, R, key);
-        //b3 chia nho mang
-         quickSort(a, L, k-1);
-         quickSort(a,k, R);
+        // chon key
+        int key = a[(L + R) / 2];
+        // phan bo lai mang theo khoa
+        int k = partition(a, L, R, key);
+        // chia nho mang theo khoa iL va lap lai
+        quickSort(a, 0, k-1);
+        quickSort(a, k, R);
+
     }
-    // return privot value
-    static int partition(int[] a, int L, int R, int key){ // tra ve phan tu  chốt iL
+    public static int partition(int[] a, int L, int R, int key) {
         int iL = L;
         int iR = R;
-        // doi phan tu khi iL < = iR
-        while (iL <= iR) {
+        // swap if iL a[iL] < a[iR]
+        while (iL <= iR){
+            // with iL, find element > key => swap
             while (a[iL] < key) iL++;
-            // với iR tìm phần tử <= key để đổi chỗ
+            // with iR, find element < key => swap
             while (a[iR] > key) iR--;
-            // nếu a[il] > a[iR] => swap
-            if (iL <= iR) {
-                int temple = a[iL];
+
+            // if a[iL] < a[iR]
+            while (a[iL] <= a[iR]) {
+                // swap
+                int temp = a[iL];
                 a[iL] = a[iR];
-                a[iR] = a[iL];
+                a[iR] = temp;
                 iL++;
                 iR--;
             }
@@ -35,7 +40,8 @@ public class QuickSort {
         return iL;
     }
     public static void main(String[] args) {
-        int[] a = {5,1,1,2,0,0};
-        quickSort(a, 0, a.length-1);
+        int[] a = {6,7,8,5,4,1,2,3};
+        quickSort(a, 0, a.length - 1);
+        System.out.println(Arrays.toString(a));
     }
 }
