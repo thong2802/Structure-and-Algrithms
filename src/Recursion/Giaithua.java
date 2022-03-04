@@ -6,6 +6,7 @@ public class Giaithua {
         // bai toan co so
         if (n == 0)
             return 1;
+        // CT quy nap
         int t = n*TinhGiaiThua(n-1);
         return t;
     }
