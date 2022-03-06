@@ -2,23 +2,36 @@ package Arrays;
 
 public class _283MoveZeroes {
     // tao mang moi
+    // complexity time 0(n)
+    // complexity space 0(n)
     public static void moveZeroes(int[] a){
-       int n = a.length;
-       int[] b = new int[n];
-       int k = 0;
+      int n = a.length;
+      int[] T = new int[n];
+      int iT = 0;
         for (int i = 0; i < n; i++) {
-            if (a[i] != 0){
-                b[k] = a[i];
-                k++;
+            if (a[i] != 0) {
+                a[iT ++] = a[i];
             }
         }
-        for (;k< n; k++) {
-            b[k] = 0;
+        for (; iT < n; iT ++) {
+            a[iT] = 0;
         }
     }
     // ki thuat 2 con tro
+    // complexity time 0(n)
+    // complexity space 0(1)
     public static void moveZeroes1(int[] a){
-
+         int n = a.length;
+         int index = 0;
+        for (int i = 0; i < n ; i++) {
+            if (a[i] != 0){
+                a[index] = a[i];
+                index ++;
+            }
+        }
+        for (; index < n; index++) {
+            a[index] = 0;
+        }
     }
 
 
