@@ -1,6 +1,8 @@
 package BinarySearch;
 
 public class BinarySearch_Loop {
+    // complixity time 0(logn)
+   // complexity space 0(1)
     public static int binarySearch(int target, int[] a) {
         int n = a.length;
         int iLeft = 0;

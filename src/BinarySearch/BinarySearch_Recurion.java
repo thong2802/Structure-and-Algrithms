@@ -1,5 +1,8 @@
 package BinarySearch;
 
+
+// complixity time 0(logn)
+// complexity space 0(logn)
 public class BinarySearch_Recurion {
     public static int seach(int[] a, int target, int iLeft, int iRight) {
         // BTCS
