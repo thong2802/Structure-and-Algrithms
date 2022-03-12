@@ -13,21 +13,20 @@ public class SelectSort {
         System.out.println(" ");
     }
     public static void selectSort(int[] a) {
-        int n = a.length;
-        int min;
-        for (int i = 0; i < n -1; i++) {
-            min = i;
-            for (int j = i +1; j < n; j++) {
-                // find mix [i+1, n]
-                if (a[j] < a[min]){
-                    min = j;
+           int n = a.length;
+           int min;
+           for (int i = 0; i < n-1; i++) {
+                min = i;
+                for (int j = i + 1; j < n; j++) {
+                    if (a[j] < a[min]) {
+                        min = j;
+                    }
                 }
-            }
             if (min != i) {
                 int temp = a[i];
                 a[i] = a[min];
                 a[min] = temp;
-            }
+        }
             printSort(i, a);
         }
     }
