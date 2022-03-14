@@ -15,7 +15,6 @@ public class QuickSort {
         // chia nho mang theo khoa iL va lap lai
         quickSort(a, 0, k-1);
         quickSort(a, k, R);
-
     }
     public static int partition(int[] a, int L, int R, int key) {
         int iL = L;
