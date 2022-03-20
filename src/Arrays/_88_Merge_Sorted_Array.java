@@ -8,6 +8,7 @@ public class _88_Merge_Sorted_Array {
             m++;
         }
     }
+    // 
     private static void chenvaonums1(int ai, int[] nums1, int m) {
         boolean timduoc = false;
         for (int k = 0; k < m; k++) {

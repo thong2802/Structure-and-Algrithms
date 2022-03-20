@@ -10,7 +10,7 @@ public class String_Character_and_Char {
                 System.out.print(c+" ");
             }
         }
-        char c = 'A';
+        char c = 'a';
         System.out.println("\n"+c + " ma ascci of c is : =  "+(byte)c);
 
 
