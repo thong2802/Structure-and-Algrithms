@@ -15,21 +15,22 @@ public class Bubble_Sort {
     public static void BubbleSort(int[] a) {
         int n = a.length;
         for (int i = 0; i < n; i++) {
-            boolean sorted = true;
-            for (int j = 0; j < (n - i- 1); j++) {
-                if (a[j] > a[j+1]){
-                    sorted = false;
-                    // swap
-                    int temp = a[j];
-                    a[j] = a[j+1];
-                    a[j+1] = temp;
-                }
+            boolean isSorted = true;
+            for (int j = 0; j < (n-i-1); j++) {
+                 if (a[j] > a[j+1]) {
+                     // swap
+                     isSorted = false;
+                     int temp = a[j];
+                     a[j] = a[j+1];
+                     a[j+1] = temp;
+                 }
             }
-            printSort(i, a);
-            if (sorted) {
+            if (isSorted == true) {
                 break;
             }
+            printSort(i, a);
         }
+
     }
 
     public static void main(String[] args) {

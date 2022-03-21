@@ -1,6 +1,6 @@
 package Sort;
 
-public class  _414ThirdMaximumNumber {
+public class   _414ThirdMaximumNumber {
     public static int thirdMax(int[] nums) {
         Integer max = null;
         Integer second_max = null;

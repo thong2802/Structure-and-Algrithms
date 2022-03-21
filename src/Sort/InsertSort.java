@@ -12,11 +12,10 @@ public class InsertSort {
     {
         int n = a.length;
         for (int i = 1; i < n; i++) {
-            // chen a[i] vao day [0, i-1]
             int ai = a[i];
-            int j = i -1;
+            int j = i-1;
             while (j >= 0 && a[j] > ai) {
-                a[j + 1] = a[j];
+                a[j+1] = a[j];
                 j--;
             }
             a[j+1] = ai;
