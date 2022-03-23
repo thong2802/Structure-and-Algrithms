@@ -3,20 +3,20 @@ package StackAndQueue;
 public class testMain {
     public static void main(String[] args) {
         // Stack Array
-/*        Stack_Array stack = new Stack_Array(3);
-        System.out.println(stack.isEmpty());
-        System.out.println(stack.push(1));
-        System.out.println(stack.push(2));
-        System.out.println(stack.push(3));
-        stack.show();
-        System.out.println(stack.isFull());
-        System.out.println(stack.pop());
-        stack.show();
-        System.out.println(stack.isEmpty());*/
+//        StackArray stack = new StackArray(3);
+//        System.out.println(stack.isEmpty());
+//        System.out.println(stack.push(1));
+//        System.out.println(stack.push(2));
+//        System.out.println(stack.push(3));
+//        stack.show();
+//        System.out.println(stack.isFull());
+//        System.out.println(stack.pop());
+//        stack.show();
+//        System.out.println(stack.isEmpty());
 
 
         //  Queue Array
-/*        Queue_Array queue = new Queue_Array(3);
+        QueueArray queue = new QueueArray(3);
         System.out.println(queue.isEmpty());
         System.out.println(queue.isFull());
         System.out.println(queue.push(1));
@@ -26,7 +26,7 @@ public class testMain {
         System.out.println(queue.count());
         queue.show();
         System.out.println(queue.pop());
-        queue.show();*/
+        queue.show();
 
         // Stack - Linked List
 /*
@@ -47,7 +47,7 @@ public class testMain {
 */
 
         // Queue - Linked List
-        Queue_LinkedList queue_linkedList = new Queue_LinkedList();
+   /*     Queue_LinkedList queue_linkedList = new Queue_LinkedList();
         System.out.println(queue_linkedList.isEmpty());
         System.out.println(queue_linkedList.isFull());
         queue_linkedList.show();
@@ -64,5 +64,7 @@ public class testMain {
         queue_linkedList.show();
         System.out.println(queue_linkedList.pop());
         queue_linkedList.show();
+         */
    }
+
 }
