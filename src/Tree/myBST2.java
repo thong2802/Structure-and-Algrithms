@@ -6,8 +6,6 @@ public class myBST2 {
     public myBST2() {
 
     }
-
-
     //insert == loop
     public TreeNode2 insert(TreeNode2 root, int value){
         TreeNode2 newNode = new TreeNode2(value);

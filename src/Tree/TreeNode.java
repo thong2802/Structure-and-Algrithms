@@ -9,7 +9,4 @@ public class TreeNode {
        this.val = val;
    }
 
-
-
-
 }
