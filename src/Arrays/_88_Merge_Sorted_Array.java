@@ -27,22 +27,22 @@ public class _88_Merge_Sorted_Array {
     }
 
     // dung 2 con tro
-    public  void merge2(int[] n1, int m, int[] n2, int n) {
-        int i = m - 1;
-        int j = n -1;
-        int k = ( m + n) - 1;
-        while(k >= 0) {
+    public static void merge2(int[] nums1, int m, int[] nums2, int n) {
+        int i = m-1;
+        int j = n-1;
+        int k = (m+n) - 1;
+        while(k >=0){
             if(i < 0) {
-                n1[k] = n2[j];
+                nums1[k] = nums2[j];
                 j--;
             }else if(j < 0) {
-                n1[k] = n1[i];
+                nums1[k] = nums1[i];
                 i--;
-            }else if(n1[i] >= n2[j]) {
-                n1[k] = n1[i];
+            }else if(nums1[i] >= nums2[j]){
+                nums1[k] = nums1[i];
                 i--;
             }else {
-                n1[k] = n2[j];
+                nums1[k] = nums2[j];
                 j--;
             }
             k--;
@@ -53,7 +53,7 @@ public class _88_Merge_Sorted_Array {
     public static void main(String[] args) {
         int[] n1 = {0};
         int[] n2 = {1};
-        merge(n1, 0, n2, 1);
+        merge2(n1, 0, n2, 1);
         System.out.println("DONW");
     }
 }
